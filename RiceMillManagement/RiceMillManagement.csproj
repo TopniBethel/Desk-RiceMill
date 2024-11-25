@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9D252A1F-3EDD-4800-9692-41E05D08C9DD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RiceMillManagement</RootNamespace>
+    <AssemblyName>RiceMillManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>BUYP-WHITE-ICON.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.5\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database.cs" />
+    <Compile Include="DaySheet\DaysheetReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DaySheet\DaysheetReport.Designer.cs">
+      <DependentUpon>DaysheetReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DaySheet\ExpenseEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DaySheet\ExpenseEntry.Designer.cs">
+      <DependentUpon>ExpenseEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DaySheet\IncomeEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DaySheet\IncomeEntry.Designer.cs">
+      <DependentUpon>IncomeEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delivery\DeliveryReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delivery\DeliveryReceipt.Designer.cs">
+      <DependentUpon>DeliveryReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delivery\RiceDelivery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delivery\RiceDelivery.Designer.cs">
+      <DependentUpon>RiceDelivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Packing\PackingEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Packing\PackingEntry.Designer.cs">
+      <DependentUpon>PackingEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Packing\RiceOutPutStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Packing\RiceOutPutStatus.Designer.cs">
+      <DependentUpon>RiceOutPutStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\CreateProduction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\CreateProduction.Designer.cs">
+      <DependentUpon>CreateProduction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\FactoryStatusEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\FactoryStatusEntry.Designer.cs">
+      <DependentUpon>FactoryStatusEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\ProductionStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\ProductionStatus.Designer.cs">
+      <DependentUpon>ProductionStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Purchase\NewPurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\NewPurchase.Designer.cs">
+      <DependentUpon>NewPurchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\PaymentReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\PaymentReport.Designer.cs">
+      <DependentUpon>PaymentReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CreditDebit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\CreditDebit.Designer.cs">
+      <DependentUpon>CreditDebit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DeliveryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\DeliveryReport.Designer.cs">
+      <DependentUpon>DeliveryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\OverallStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\OverallStock.Designer.cs">
+      <DependentUpon>OverallStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\PackingReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\PackingReport.Designer.cs">
+      <DependentUpon>PackingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ProductionReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ProductionReport.Designer.cs">
+      <DependentUpon>ProductionReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\PurchaseReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\PurchaseReport.Designer.cs">
+      <DependentUpon>PurchaseReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\RiceOutput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\RiceOutput.Designer.cs">
+      <DependentUpon>RiceOutput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\SellingReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\SellingReport.Designer.cs">
+      <DependentUpon>SellingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\StockReceived.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\StockReceived.Designer.cs">
+      <DependentUpon>StockReceived.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\SalesEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\SalesEntry.Designer.cs">
+      <DependentUpon>SalesEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\EmployeeSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting\EmployeeSetting.Designer.cs">
+      <DependentUpon>EmployeeSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\ExpenseSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting\ExpenseSetting.Designer.cs">
+      <DependentUpon>ExpenseSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\IncomeSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting\IncomeSetting.Designer.cs">
+      <DependentUpon>IncomeSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\PasswordSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting\PasswordSetting.Designer.cs">
+      <DependentUpon>PasswordSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting\Payment.Designer.cs">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\StateSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting\StateSetting.Designer.cs">
+      <DependentUpon>StateSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\Workwages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting\Workwages.Designer.cs">
+      <DependentUpon>Workwages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\GradeSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\GradeSetting.Designer.cs">
+      <DependentUpon>GradeSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\StockReceivedEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\StockReceivedEntry.Designer.cs">
+      <DependentUpon>StockReceivedEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier\PaddyReceiver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier\PaddyReceiver.Designer.cs">
+      <DependentUpon>PaddyReceiver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier\PaddySupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier\PaddySupplier.Designer.cs">
+      <DependentUpon>PaddySupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier\RiceSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier\RiceSupplier.Designer.cs">
+      <DependentUpon>RiceSupplier.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DaySheet\DaysheetReport.resx">
+      <DependentUpon>DaysheetReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DaySheet\ExpenseEntry.resx">
+      <DependentUpon>ExpenseEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DaySheet\IncomeEntry.resx">
+      <DependentUpon>IncomeEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delivery\DeliveryReceipt.resx">
+      <DependentUpon>DeliveryReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delivery\RiceDelivery.resx">
+      <DependentUpon>RiceDelivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Packing\PackingEntry.resx">
+      <DependentUpon>PackingEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Packing\RiceOutPutStatus.resx">
+      <DependentUpon>RiceOutPutStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\CreateProduction.resx">
+      <DependentUpon>CreateProduction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\FactoryStatusEntry.resx">
+      <DependentUpon>FactoryStatusEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\ProductionStatus.resx">
+      <DependentUpon>ProductionStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Purchase\NewPurchase.resx">
+      <DependentUpon>NewPurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\PaymentReport.resx">
+      <DependentUpon>PaymentReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CreditDebit.resx">
+      <DependentUpon>CreditDebit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\DeliveryReport.resx">
+      <DependentUpon>DeliveryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\OverallStock.resx">
+      <DependentUpon>OverallStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PackingReport.resx">
+      <DependentUpon>PackingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ProductionReport.resx">
+      <DependentUpon>ProductionReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PurchaseReport.resx">
+      <DependentUpon>PurchaseReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\RiceOutput.resx">
+      <DependentUpon>RiceOutput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\SellingReport.resx">
+      <DependentUpon>SellingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\StockReceived.resx">
+      <DependentUpon>StockReceived.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\EmployeeSetting.resx">
+      <DependentUpon>EmployeeSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\ExpenseSetting.resx">
+      <DependentUpon>ExpenseSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\IncomeSetting.resx">
+      <DependentUpon>IncomeSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\PasswordSetting.resx">
+      <DependentUpon>PasswordSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\StateSetting.resx">
+      <DependentUpon>StateSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\Workwages.resx">
+      <DependentUpon>Workwages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\GradeSetting.resx">
+      <DependentUpon>GradeSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\StockReceivedEntry.resx">
+      <DependentUpon>StockReceivedEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier\PaddyReceiver.resx">
+      <DependentUpon>PaddyReceiver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier\PaddySupplier.resx">
+      <DependentUpon>PaddySupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier\RiceSupplier.resx">
+      <DependentUpon>RiceSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BUYPLOGO- Copy1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BUYP-WHITE-ICON.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
